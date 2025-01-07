@@ -1,31 +1,40 @@
 ---
-name: Deploy to GitHub Pages
+name: Deploy Jekyll site to GitHub Pages
 
 on:
   push:
     branches:
-      - master  # Trigger the action on pushes to the master branch
+      - master
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
 
     steps:
-      # Step 1: Checkout the repository
-      - name: Checkout code
+      # Check out the repository
+      - name: Checkout repository
         uses: actions/checkout@v3
 
-      # Step 2: Build the project (optional, if using a build step)
-      # Uncomment and customize this section if necessary:
-      # - name: Install dependencies and build
-      #   run: |
-      #     npm install
-      #     npm run build
+      # Set up Ruby for Jekyll
+      - name: Set up Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: 3.0
 
-      # Step 3: Deploy to GitHub Pages
+      # Install dependencies
+      - name: Install dependencies
+        run: |
+          bundle install
+
+      # Build the Jekyll site
+      - name: Build site
+        run: |
+          bundle exec jekyll build
+
+      # Deploy to GitHub Pages
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./  # Change this if your output directory differs
+          publish_dir: ./_site
           destination_branch: gh-pages
