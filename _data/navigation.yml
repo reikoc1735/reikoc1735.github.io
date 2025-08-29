@@ -9,7 +9,7 @@ main:
     dropdown: true
     items:
       - title: "Landslide Detection"
-        url: "https://reikoc1735.github.io/landslide-detection/"
+        url: "https://xincalwei.github.io/landslide-detection/"
       # - title: "Very long to test the expanding width part of the code"
       #   url: "https://github.com/reikoc1735/repository1"
       # - title: "Tester"
