@@ -18,21 +18,7 @@ main:
     dropdown: true
     items:
       - title: "3D Printing"
-        dropdown: true
-        items:
-            - title: "ENTR 390 - 3D Printing/Prototype"
-              url: "https://reikocentr390.blogspot.com/"
-            - title: "Tutorials"
-              url: "/3d-printing/tutorials/"
-            - title: "Resources"
-              dropdown: true
-              items:
-                - title: "STL Files"
-                  url: "/3d-printing/resources/stl/"
-                - title: "Slicer Settings"
-                  url: "/3d-printing/resources/slicer/"
-      - title: test
-        url: "/"
+        url: "https://reikocentr390.blogspot.com/"
   - title: "Other"
     dropdown: false
   # - title: "Guide"
