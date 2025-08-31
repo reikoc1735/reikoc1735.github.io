@@ -17,8 +17,11 @@ main:
   - title: "Blog Posts"
     dropdown: true
     items:
-      - title: Blog
-        url: "https://reikocentr390.blogspot.com/"
+      - title: "3D Printing"
+        dropdown: true
+        items:
+          - title: "ENTR 390 - 3D Printing/Prototype"
+            url: "https://reikocentr390.blogspot.com/"
       - title: test
         url: "/"
   - title: "Other"
