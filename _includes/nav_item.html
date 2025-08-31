@@ -1,0 +1,26 @@
+{% comment %}
+Recursive navigation item include for unlimited sub-dropdowns
+Usage: {% include nav_item.html item=nav %}
+{% endcomment %}
+
+<li>
+  {% if item.url %}
+    {% if item.url contains '://' %}
+      {% assign domain = '' %}
+    {% else %}
+      {% assign domain = base_path %}
+    {% endif %}
+    <a href="{{ domain }}{{ item.url }}"><span class="nav__sub-title">{{ item.title }}</span></a>
+  {% else %}
+    <span class="nav__sub-title">{{ item.title }}</span>
+  {% endif %}
+
+  {% if item.items or item.children %}
+    <ul>
+      {% assign children = item.items | default: item.children %}
+      {% for child in children %}
+        {% include nav_item.html item=child %}
+      {% endfor %}
+    </ul>
+  {% endif %}
+</li>
