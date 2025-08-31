@@ -17,7 +17,9 @@ main:
   - title: "Blog Posts"
     children:
       - title: Blog
-        url: "https://reikocentr390.blogspot.com/""
+        url: "https://reikocentr390.blogspot.com/"
+      - title: test
+        url: "/"
   - title: "Other"
     dropdown: false
   # - title: "Guide"
