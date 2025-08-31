@@ -15,7 +15,8 @@ main:
       # - title: "Tester"
       #   url: "https://github.com/reikoc1735/repository1"
   - title: "Blog Posts"
-    children:
+    dropdown: true
+    items:
       - title: Blog
         url: "https://reikocentr390.blogspot.com/"
       - title: test
